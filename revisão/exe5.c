@@ -8,9 +8,7 @@ typedef struct{
   int ranking;
 }Banda;
 
-  Banda bandas[5];
-
-void preencheBanda(){
+void preencheBanda(Banda *bandas){
 
   for (int i = 0; i < 5; i++) {
 
@@ -44,7 +42,7 @@ void preencheBanda(){
   }
 }
 
-void exibeBanda(){
+void exibeBanda(Banda *bandas){
   int n;
 
   printf("Informe um numero de 1 a 5: ");
@@ -62,8 +60,10 @@ void exibeBanda(){
 
 int main() {
 
-  preencheBanda();
-  exibeBanda();
+  Banda bandas[5];
+
+  preencheBanda(bandas);
+  exibeBanda(bandas);
 
   return 0;
 }
